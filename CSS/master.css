@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #F4E7E1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background-color: #FFFFFF;
+}
+.logo
+{
+    width: 100px;
+    height: 100px;
+}
+.cart
+{
+    width: 25px;
+    height: 25px;
+}

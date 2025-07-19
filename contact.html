@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snackly</title>
+    <link rel="stylesheet" href="CSS/master.css">
+    <link rel="icon" href="IMGS/transparent-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-full">
+    <nav class="sticky top-0 z-50">
+        <a href="index.html">
+            <img src="IMGS/transparent-logo.png" alt="logo" class="logo">
+        </a>
+        <div class="links flex gap-5">
+            <a href="index.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Home</a>
+            <a href="products.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Shopping</a>
+            <a href="about.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">About</a>
+            <a href="contact.html" class="text-[#E23C1E] underline">Contact</a>
+        </div>
+        <div class="flex gap-5 items-center">
+            <input type="search" placeholder="Search..." class="p-2 rounded-lg bg-[#F4E7E1] outline-none">
+            <i class="bi bi-basket3 text-[#521C0D] text-xl cursor-pointer"></i>
+        </div>
+    </nav>
+
+    <header class="bg-[#521C0D] text-center py-6">
+        <p class="text-3xl font-bold text-white my-4">Contact Us</p>
+        <p class="text-gray-300">
+            Have questions or feedback? We'd love to hear from you.
+        </p>
+    </header>
+
+    <main>
+        <div class="flex px-14 my-8 gap-[50px]">
+            <div class="w-[45%] py-6">
+                <p class="text-2xl font-bold">Get In Touch</p>
+                <p class="text-gray-700 my-4">
+                    We're here to help with any questions about our products, orders, or special requests. Fill out the
+                    form or use the contact information below to get in touch with our team.
+                </p>
+                <div class="flex gap-2 my-6">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div>
+                        <span class="font-semibold">Our Location</span>
+                        <p class="text-gray-700">
+                            123 Tahrir Street <br>
+                            Cairo City, AB 12345
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2 my-6">
+                    <i class="bi bi-envelope"></i>
+                    <div>
+                        <span class="font-semibold">Email Us</span>
+                        <p class="text-gray-700">
+                            <a href="mailto:snackly@example.com"
+                        class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">snackly@example.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2 my-6">
+                    <i class="bi bi-telephone"></i>
+                    <div>
+                        <span class="font-semibold">Call Us</span>
+                        <p class="text-gray-700">(111) 111-11111</p>
+                    </div>
+                </div>
+                <p class="font-semibold">Business Hours</p>
+                <div class="flex justify-between text-gray-700 mt-3">
+                    <div>
+                        <p>Monday - Friday:</p>
+                        <p>Saturday:</p>
+                        <p>Sunday:</p>
+                    </div>
+                    <div>
+                        <p>9:00 AM - 6:00 PM</p>
+                        <p>10:00 AM - 4:00 PM</p>
+                        <p>Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[45%] shadow-xl px-8 py-6 rounded-md">
+                <p class="font-bold text-2xl">Send us a Message</p>
+                <form>
+                    <label class="block mt-4" for="username">Your Name</label>
+                    <input class="block p-3 rounded-md w-[100%]" type="text" name="username" id="username" required placeholder="Ahmed Mohamed">
+
+                    <label class="block mt-4" for="email">Email Address</label>
+                    <input class="block p-3 rounded-md w-[100%]" type="email" name="email" id="email" required placeholder="ahmed@example.com">
+
+                    <label class="block mt-4" for="subject">Subject</label>
+                    <input class="block p-3 rounded-md w-[100%]" type="text" name="subject" id="subject" required placeholder="How can we help you?">
+
+                    <label class="block mt-4" for="message">Message</label>
+                    <textarea name="messageg" id="message" placeholder="Your message here..." class="p-3 rounded-md w-[100%] h-[150px]"></textarea>
+                    <button class="bg-[#521C0D] w-[100%] my-4 py-2 text-white rounded-md hover:bg-[#803622]" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#521C0D] text-white w-full">
+        <div class="container grid grid-cols-3 px-12">
+            <div>
+                <p class="font-bold text-lg my-6">Snackly</p>
+                <span class="block w-1/2 text-[#F4E7E1]">
+                    premium snacks & drinks, delivered fresh whenever you crave.
+                </span>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg my-6">Quick Links</p>
+                <ul class="grid gap-3 text-[#F4E7E1]">
+                    <li>
+                        <a href="products.html"
+                            class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Shopping</a>
+                    </li>
+                    <li>
+                        <a href="about.html"
+                            class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html"
+                            class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg my-6">Contact Us</p>
+                <span class="text-[#F4E7E1]">
+                    123 Tahrir Street <br>
+                    Cairo City, AB 12345 <br>
+                    Phone: (111) 111-11111 <br>
+                    Email: <a href="mailto:snackly@example.com"
+                        class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">snackly@example.com</a>
+                </span>
+            </div>
+        </div>
+        <hr class="border-t border-gray-300 mt-4 opacity-[0.2]">
+        <p class="text-center py-4">&copy; 2025 Snackly. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
