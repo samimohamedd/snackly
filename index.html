@@ -9,39 +9,45 @@
     <link rel="icon" href="IMGS/transparent-logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body class="h-full">
     <nav class="sticky top-0 z-50">
-        <a href="index.html">
+        <a href="index.html" class="shrink-0">
             <img src="IMGS/transparent-logo.png" alt="logo" class="logo">
         </a>
-        <div class="links flex gap-5">
-            <a href="index.html" class="text-[#E23C1E] underline">Home</a>
-            <a href="products.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Shopping</a>
-            <a href="about.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">About</a>
-            <a href="contact.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Contact</a>
-        </div>
-        <div class="flex gap-5 items-center">
-            <input type="search" placeholder="Search..." class="p-2 rounded-lg bg-[#F4E7E1] outline-none">
-            <i class="bi bi-basket3 text-[#521C0D] text-xl cursor-pointer"></i>
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">
+            <i class="bi bi-list text-3xl text-[#521C0D]"></i>
+        </button>
+        <div id="nav-menu" class="nav-menu">
+            <div class="links flex flex-col items-center md:flex-row gap-3 md:gap-5">
+                <a href="index.html" class="text-[#E23C1E] underline" aria-current="page">Home</a>
+                <a href="products.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Shopping</a>
+                <a href="about.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">About</a>
+                <a href="contact.html" class="transition-all duration-300 ease-in-out hover:text-[#E23C1E]">Contact</a>
+            </div>
+            <div class="flex gap-5 items-center w-full md:w-auto justify-center">
+                <input type="search" placeholder="Search..." class="p-2 rounded-lg bg-[#F4E7E1] outline-none w-full max-w-xs md:w-auto">
+                <i class="bi bi-basket3 text-[#521C0D] text-xl cursor-pointer"></i>
+            </div>
         </div>
     </nav>
-    <main class="relative bg-cover bg-center h-[500px]"
+    <main class="relative bg-cover bg-center min-h-[500px]"
         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMGS/bg.jpeg');">
-        <div class="flex h-full items-center">
-            <div class="grid align-middle place-items-center">
-                <p class="text-white text-center w-1/2 text-5xl font-bold my-6">
+        <div class="flex min-h-[500px] items-center justify-center px-4 py-12">
+            <div class="grid align-middle place-items-center w-full">
+                <p class="text-white text-center w-full md:w-3/4 lg:w-1/2 text-3xl sm:text-4xl md:text-5xl font-bold my-6">
                     Exceptional Food & <br> Beverage Products
                 </p>
-                <p class="text-white text-center w-1/2 text-xl">
+                <p class="text-white text-center w-full md:w-3/4 lg:w-1/2 text-base sm:text-lg md:text-xl">
                     Crafted from the finest premium ingredients, our food and beverage selections promise exceptional
                     taste,
                     unmatched freshness, and a delightful experience with every bite and sip — all delivered straight to
                     your
                     doorstep with care.
                 </p><br>
-                <div class="flex gap-10 my-6">
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-10 my-6">
                     <a href="products.html" class="bg-[#E67C25] py-3 px-6 rounded-md text-white
                     border-2 border-solid border-opacity-0 border-[#E67C25] hover:border-opacity-100
                     transition-all ease-in-out duration-300 hover:bg-transparent">Shop Now</a>
@@ -53,11 +59,11 @@
         </div>
     </main>
     <section>
-        <p class="text-4xl font-bold text-center my-6">Best <span class="text-[#521C0D]">Sellar</span></p>
-        <div class="flex gap-[2%] justify-center items-center my-4">
-            <div class="w-[400px] rounded-2xl shadow-md shadow-[#521c0d47] transition-all duration-200 hover:scale-105">
+        <p class="text-3xl sm:text-4xl font-bold text-center my-6">Best <span class="text-[#521C0D]">Sellar</span></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center px-4 sm:px-6 max-w-7xl mx-auto my-4">
+            <div class="w-full max-w-[400px] rounded-2xl shadow-md shadow-[#521c0d47] transition-all duration-200 hover:scale-105">
                 <img src="IMGS/products/product-1.jpg" alt="coffee" loading="lazy"
-                class="rounded-t-2xl w-full h-[300px]">
+                class="rounded-t-2xl w-full h-[220px] sm:h-[300px] object-cover">
                 <div class="bg-white py-2 px-3 rounded-b-2xl">
                     <p class="text-lg my-2 font-bold">Special Turkish coffee</p>
                     <p class="text-wrap text-[#4B5563]">
@@ -71,9 +77,9 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[400px] rounded-2xl shadow-md shadow-[#521c0d47] transition-all duration-200 hover:scale-105">
+            <div class="w-full max-w-[400px] rounded-2xl shadow-md shadow-[#521c0d47] transition-all duration-200 hover:scale-105">
                 <img src="IMGS/products/product-2.jpg" alt="nuts" loading="lazy"
-                class="rounded-t-2xl w-full h-[300px]">
+                class="rounded-t-2xl w-full h-[220px] sm:h-[300px] object-cover">
                 <div class="bg-white py-2 px-3 rounded-b-2xl">
                     <p class="text-lg my-2 font-bold">Premium Mixed Nuts</p>
                     <p class="text-wrap text-[#4B5563]">
@@ -87,9 +93,9 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[400px] rounded-2xl shadow-md shadow-[#521c0d47] transition-all duration-200 hover:scale-105">
+            <div class="sm:col-span-2 lg:col-span-1 w-full max-w-[400px] rounded-2xl shadow-md shadow-[#521c0d47] transition-all duration-200 hover:scale-105">
                 <img src="IMGS/products/product-3.jpg" alt="mango" loading="lazy"
-                class="rounded-t-2xl w-full h-[300px]">
+                class="rounded-t-2xl w-full h-[220px] sm:h-[300px] object-cover">
                 <div class="bg-white py-2 px-3 rounded-b-2xl">
                     <p class="text-lg my-2 font-bold">Mango Bliss Juice</p>
                     <p class="text-wrap text-[#4B5563]">
@@ -104,16 +110,16 @@
                 </div>
             </div>
         </div>
-        <div class="text-center my-12 text-white">
+        <div class="text-center my-10 sm:my-12 px-4 text-white">
             <a href="products.html" class="bg-[#521C0D] py-3 px-4 rounded-md
             transition-all duration-200 hover:bg-[#733422]">View All Products</a>
         </div>
     </section>
     <footer class="bg-[#521C0D] text-white w-full">
-        <div class="container grid grid-cols-3 px-12">
+        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 px-6 sm:px-12 pb-4">
             <div>
                 <p class="font-bold text-lg my-6">Snackly</p>
-                <span class="block w-1/2 text-[#F4E7E1]">
+                <span class="block w-full sm:w-3/4 lg:w-1/2 text-[#F4E7E1]">
                     premium snacks & drinks, delivered fresh whenever you crave.
                 </span>
             </div>
@@ -136,9 +142,9 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="sm:col-span-2 lg:col-span-1">
                 <p class="font-bold text-lg my-6">Contact Us</p>
-                <span class="text-[#F4E7E1]">
+                <span class="text-[#F4E7E1] break-words">
                     123 Tahrir Street <br>
                     Cairo City, AB 12345 <br>
                     Phone: (111) 111-11111 <br>
@@ -148,7 +154,7 @@
             </div>
         </div>
         <hr class="border-t border-gray-300 mt-4 opacity-[0.2]">
-        <p class="text-center py-4">&copy; 2025 Snackly. All rights reserved.</p>
+        <p class="text-center py-4 px-4">&copy; 2025 Snackly. All rights reserved.</p>
     </footer>
 </body>
 
